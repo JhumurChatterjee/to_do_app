@@ -1,29 +1,22 @@
 import React from 'react';
+import ToDo from './ToDo';
 
-class ToDoCreate extends React.Component {
-  constructor(props) {
-    super(props);
-    this.addItem = this.addItem.bind(this);
-  }
-
-  addItem(e) {
-    this.props.change(e.target.toDo.value);
-    e.preventDefault();
-  }
-
+class ToDoList extends React.Component {
   render() {
-    return(  
-	  <div className="container">
-        <form onSubmit={ this.addItem }>
-          <label>
-          Tell us what you want to do: </label>
-          <input type="text" name="toDo" placeholder = "Enter Item" />
-          <input type="submit" value="Create" />
-        </form>
+    const items = this.props.items;
+    return( 
+	  <div className="card">
+        <ul>
+          {
+          items.map((item) => {
+            return <ToDo item={item} itemStatus={this.props.status.bind(this, item)} />
+          })
+          }
+        </ul>
       </div>
     );
   }
 }
 
 
-export default ToDoCreate
+export default ToDoList;

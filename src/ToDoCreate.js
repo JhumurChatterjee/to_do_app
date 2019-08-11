@@ -9,6 +9,7 @@ class ToDoCreate extends React.Component {
   addItem(e) {
     this.props.change(e.target.toDo.value);
     e.preventDefault();
+    e.target.toDo.value = "";
   }
 
   render() {
@@ -26,4 +27,4 @@ class ToDoCreate extends React.Component {
 }
 
 
-export default ToDoCreate
+export default ToDoCreate;
