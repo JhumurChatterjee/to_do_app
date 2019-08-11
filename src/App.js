@@ -5,6 +5,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { items: [{text: "Jhumur", status: 'active'}] };
+    this.changeState = this.changeState.bind(this);
   }
 
   changeState(listItem) {
@@ -20,7 +21,6 @@ class App extends React.Component {
           items: prevState.items.concat(newItem),
         };
       });
-      console.log(this.state.items);
     }
 
     else {
@@ -36,5 +36,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-

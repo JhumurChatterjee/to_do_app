@@ -12,8 +12,8 @@ class ToDoCreate extends React.Component {
   }
 
   render() {
-    return(
-			<div className="container">
+    return(  
+	  <div className="container">
         <form onSubmit={ this.addItem }>
           <label>
           Tell us what you want to do: </label>
@@ -26,4 +26,4 @@ class ToDoCreate extends React.Component {
 }
 
 
-export default ToDoCreate;
+export default ToDoCreate
