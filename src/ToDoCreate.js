@@ -9,11 +9,12 @@ class ToDoCreate extends React.Component {
   addItem(e) {
     this.props.change(e.target.toDo.value);
     e.preventDefault();
+    e.target.toDo.value = "";
   }
 
   render() {
-    return(
-			<div className="container">
+    return(  
+	  <div className="container">
         <form onSubmit={ this.addItem }>
           <label>
           Tell us what you want to do: </label>
