@@ -1,4 +1,5 @@
 import React from 'react';
+import './ToDo.css'
 
 class ToDo extends React.Component {
   constructor(props) {
@@ -16,14 +17,7 @@ class ToDo extends React.Component {
     console.log(listItem);
     
     return(
-      {
-        if(listItem.status === 'active') {
-          <li key={listItem.key} onClick={this.statusChange}>{listItem.text}</li>
-        }
-        if(listItem.status === 'done') {
-         <li key={listItem.key} onClick={this.statusChange} className="done-item">{listItem.text}</li>
-        }
-      }
+      <li key={listItem.key} onClick={this.statusChange} className={listItem.status === 'done' ? 'done-item' : ''}>{listItem.text}</li>
     );
   }
 }
