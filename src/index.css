@@ -1,0 +1,21 @@
+.todo-item {
+  list-style: none;
+  margin: 5px 15px;
+}
+
+.todo-item:first-child {
+  margin-top: 0px;
+}
+
+.todo-item:last-child {
+  margin-bottom: 0px;
+}
+
+.todo-text {
+  cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
