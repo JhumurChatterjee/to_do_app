@@ -27,9 +27,7 @@ class App extends React.Component {
   handleClick = (id) => {
     const todoItems = [...this.state.todoItems];
     let todo = todoItems.find(el => el.id === id);
-    console.log('before', todoItems, id)
     if (todo === undefined) return;
-    console.log('after')
 
     if (todo.status === 'active') {
       todo.status = 'done';
@@ -39,15 +37,13 @@ class App extends React.Component {
 
     const updatedTodoItems = todoItems.map(el => el.id === id ? todo : el);
     this.setState({ todoItems: updatedTodoItems });
-
-    console.log(this.state)
   }
 
   render() {
     return(
       <div className='container'>
-        <h1 className='text-center'>TODO App</h1>
-        <div className='row justify-content-center mt-4 mb-5'>
+        <h1 className='app-header'>TODO APP</h1>
+        <div className='row justify-content-center todo-form'>
           <div className='col-6'>
             <ToDoCreate onCreate={this.handleCreate} />
           </div>
