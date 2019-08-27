@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      todoItems: []
+      todoItems: [{ id: 1, text: 'Jhumur - Jole dube morte hobe.', status: 'active' }]
     }
   }
 
