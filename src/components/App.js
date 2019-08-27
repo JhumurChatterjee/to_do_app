@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      todoItems: []
+      todoItems: [{ id: 1, text: 'Jhumur - Jole dube morte hobe.', status: 'active' }]
     }
   }
 
@@ -27,14 +27,7 @@ class App extends React.Component {
   handleClick = (id) => {
     const todoItems = [...this.state.todoItems];
     let todo = todoItems.find(el => el.id === id);
-    if (todo === undefined) return;
-
-    if (todo.status === 'active') {
-      todo.status = 'done';
-    } else {
-      todo.status = 'active';
-    }
-
+    todo.status = todo.status === 'active' ? 'done' : 'active';
     const updatedTodoItems = todoItems.map(el => el.id === id ? todo : el);
     this.setState({ todoItems: updatedTodoItems });
   }

@@ -38,3 +38,27 @@
   height: calc(100vh - 210px);
   overflow-y: auto;
 }
+
+.active-link {
+  cursor: pointer;
+  color: #FFFFFF;
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 12px;
+  border: 1px solid #00B5FF;
+  background-color: #00B5FF;
+  border-radius: 20px;
+  margin: 0px 5px;
+}
+
+.filter-link {
+  cursor: pointer;
+  color: #FFFFFF;
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 12px;
+  border: 1px solid #6894A6;
+  background-color: #6894A6;
+  border-radius: 20px;
+  margin: 0px 5px;
+}
